@@ -30,8 +30,6 @@ on property:sys.usb.config=adb
     start adbd
 
 on init
-   write /sys/android_touch/wakeup_gesture_enable 1
-
 service sbinqseecomd /sbin/qseecomd.sh
     oneshot
     disabled
