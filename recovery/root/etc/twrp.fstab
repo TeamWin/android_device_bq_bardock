@@ -1,4 +1,5 @@
 /cache            ext4       /dev/block/bootdevice/by-name/cache
+/persist          ext4       /dev/block/bootdevice/by-name/persist    flags=fsflags=noatime,nosuid,nodev,barrier=1
 /system           ext4       /dev/block/bootdevice/by-name/system
 /system_image     emmc       /dev/block/bootdevice/by-name/system
 /data             ext4       /dev/block/bootdevice/by-name/userdata   flags=encryptable=footer;length=-16384
