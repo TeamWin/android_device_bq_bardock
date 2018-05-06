@@ -4,6 +4,9 @@ on fs
     chmod 0664 /dev/ion
     chown system system /dev/ion
 
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 2A47
     write /sys/class/android_usb/android0/idProduct 9039
