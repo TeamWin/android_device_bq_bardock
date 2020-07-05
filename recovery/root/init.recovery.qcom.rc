@@ -4,6 +4,8 @@ on fs
     chmod 0664 /dev/ion
     chown system system /dev/ion
 
+    setprop ro.board.platform msm8953
+
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
